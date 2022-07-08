@@ -1,0 +1,159 @@
+#question{
+   background-color: rgba(253, 30, 78, 0.863);
+    height: 50px;
+    width: 600px;
+    margin: 5px;
+    border-radius: 60px;
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+
+}
+
+
+
+
+.red{
+  background-color: lightpink;
+  border-radius: 60px;
+    height: 30px;
+    width: 600px;
+    margin: 5px;
+   padding-left: 20px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+
+}
+.red:hover{
+    background-color: rgb(136, 113, 238);
+}
+button{
+    background-color: rgb(124, 101, 255);
+    border-radius: 10px;
+    height: 60px;
+    width: 110px;
+    margin-top: -13px;
+    margin-left: 265px;
+    transition-duration: 1s;
+    color: azure;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+button:hover{
+background-color: rgb(65, 54, 219);
+}
+
+ 
+.itemfirst{
+  height: 350px;
+  width: 500px;
+  margin-top: 50px;
+
+}
+
+.main-container{
+  background-color: #1edfaf;
+  border-radius: 45px;
+  width: 90vw;
+  margin: auto;
+  margin-top: 75px;
+
+padding: 20px;
+  animation-name: up;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+@keyframes up {
+  0%{
+      margin-top: 600px;
+  }
+  100%{
+      margin-top: 75px;
+  }
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+ 
+ 
+
+}
+
+body{
+ background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlzxGvqkUeMKqj8TGzpuJfoL1LAVmnvKSWyqCeQjmA5kzQP5dgkukhckwIV2yMsYVBffk&usqp=CAU);
+  background-size: cover;
+ 
+}
+
+h1{
+ 
+  font-family:cursive;
+  font-size: 50px;
+}
+p{
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 20px;
+}
+
+.score {
+  height: 100px;
+ 
+}
+
+
+.correct {
+  background-color: rgb(43, 211, 107);
+}
+
+.wrong {
+  background-color: rgb(241, 38, 38);
+}
+table{
+  animation-name: up;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  border: pink 10px solid;
+  border-radius: 20px;
+
+}
+
+
+.itemsecond td {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  text-decoration-color: black;
+
+}
+.itemsecond {
+		
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+td{
+  height: 105px;
+  width: 100px;
+  text-align: center;
+
+}
+td img {
+  width: 80px;
+  transition-duration: 1s;
+  opacity: 0.8;
+
+}
+td img:hover{
+  width: 98px;
+  opacity: 1;
+  
+}
+
+

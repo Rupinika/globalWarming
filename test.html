@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="test.css">
+    
+</head>
+
+<body>
+
+    <main>
+
+        <div class="main-container">
+            <nav>
+                <a  href="index.html">Home</a>
+                <a href="what.html">What?</a>
+                <a href="impact.html">Impact</a>
+                <a href="save.html">Save</a>
+                <a style="color:rgb(231, 12, 132); ;" href="test.html">Test</a>
+
+            </nav>
+            <div class="container">
+                <div class="itemfirst">
+                    <h1 style="margin-top: -70px;color: rgb(202, 45, 45);"><b>Test</b></h1>
+                    <div id="question">
+
+                    </div>
+
+                    <div id="firstOption" class="red" onclick="checkoption(this)">
+
+                    </div>
+                    <br>
+                    <div id="secondOption" class="red" onclick="checkoption(this)">
+
+                    </div>
+                    <br>
+                    <div id="thirdOption" class="red" onclick="checkoption(this)">
+
+                    </div>
+                    <br>
+                    <div id="fourthOption" class="red" onclick="checkoption(this)">
+
+                    </div>
+                    <br>
+                   
+                    <button onclick="changeQuestion()">Next</button>
+
+
+
+                </div>
+                <div class="itemsecond">
+                    <table border="">
+                        <tr class="score">
+                            <td class="correct"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/White_check_mark_in_dark_green_rounded_square.svg/1200px-White_check_mark_in_dark_green_rounded_square.svg.png"
+                                    alt=""></td>
+        
+                            <td class="wrong"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/White_x_in_red_rounded_square.svg/1024px-White_x_in_red_rounded_square.svg.png"
+                                    alt=""></td>
+                        </tr>
+        
+                        <tr class="score">
+                            <td class="correct">
+                                <h1 id="cscore">0</h1>
+                            </td>
+                            <td class="wrong">
+                                <h1 id="wscore">0</h1>
+                            </td>
+                        </tr>
+                    </table>
+        
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+    <script>
+
+        questionOne = {
+            question: "What is Global Warming?",
+            optionOne: "It is a heating process used to heat the Earth.",
+            optionTwo: "It is an event that might happen in the future melting our Earth.",
+            optionThree: "It is the process in which our Earth's averge temperature rises.",
+            optionFour: "It is the process in which our global rainforest average temperature rises. ",
+            optionCorrect: "It is the process in which our Earth's averge temperature rises."
+        }
+        questionTwo = {
+            question: "In the past century how much has the temperature of the Earth increased?",
+            optionOne: "1.006 degrees celsius",
+            optionTwo: "55.8 degrees celsius",
+            optionThree: "69 degrees celsius",
+            optionFour: "1 degree celsius",
+            optionCorrect: "1 degree celsius"
+        }
+        questionThree = {
+            question: "What is the greenhouse effect?",
+            optionOne: "Certain gases in the atmosphere trap heat and warm the Earth",
+            optionTwo: "Life on Earth exhales gas the warms up the atmosphere",
+            optionThree: "The tilt of the Earth changes the amount of solar energy the Earth receives",
+            optionFour: "The Sun is putting out more radiant energy over time",
+            optionCorrect: "Certain gases in the atmosphere trap heat and warm the Earth"
+        }
+        questionFour = {
+            question: "If the greenhouse effect is natural, then why is today's climate change a bad thing?",
+            optionOne: "Humans have altered a natural process and exaggerated changes that might normally occur over millions of years",
+            optionTwo: "Once released into the atmosphere, greenhouse gases remain potent for many years, making it difficult to reverse the process.",
+            optionThree: "A small increase in greenhouse gas concentration can have a large effect of increased warming",
+            optionFour: "All of the above",
+            optionCorrect: "All of the above"
+        }
+        questionFive = {
+            question: " Which activity is the largest contributors of greenhouse gases?",
+            optionOne: "Landfills",
+            optionTwo: "Deforestation",
+            optionThree: "Industry",
+            optionFour: "Electricity generation",
+            optionCorrect: "Electricity generation"
+        }
+        questionSix = {
+            question: "Thank You for playing!",
+            optionOne: " ",
+            optionTwo: " ",
+            optionThree: " ",
+            optionFour: "",
+            optionCorrect: ""
+        }
+
+        questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix]
+
+        function changeQuestion() {
+            questionNumber += 1
+            document.getElementById("question").innerText = questions[questionNumber]["question"]
+            document.getElementById("firstOption").innerText = questions[questionNumber]["optionOne"]
+            document.getElementById("secondOption").innerText = questions[questionNumber]["optionTwo"]
+            document.getElementById("thirdOption").innerText = questions[questionNumber]["optionThree"]
+            document.getElementById("fourthOption").innerText = questions[questionNumber]["optionFour"]
+            
+            document.getElementById("firstOption").style.backgroundColor="lightpink"
+            document.getElementById("secondOption").style.backgroundColor="lightpink"
+            document.getElementById("thirdOption").style.backgroundColor="lightpink"
+            document.getElementById("fourthOption").style.backgroundColor="lightpink"
+      clickOpt=0
+            
+        }
+
+        let questionNumber = 0
+        document.getElementById("question").innerText = questions[questionNumber]["question"]
+        document.getElementById("firstOption").innerText = questions[questionNumber]["optionOne"]
+        document.getElementById("secondOption").innerText = questions[questionNumber]["optionTwo"]
+        document.getElementById("thirdOption").innerText = questions[questionNumber]["optionThree"]
+        document.getElementById("fourthOption").innerText = questions[questionNumber]["optionFour"]
+
+        let correct = 0
+		let wrong = 0
+
+        let clickOpt = 0
+        function checkoption(clickedOpt) {
+            if (clickOpt == 0) {
+                if (clickedOpt.innerText == questions[questionNumber]["optionCorrect"]) {
+                    clickedOpt.style.backgroundColor = "green"
+                   correct = correct + 1
+                    document.getElementById("cscore").innerText = correct
+                }
+                else {
+                    clickedOpt.style.backgroundColor = "red"
+                    wrong = wrong + 1
+                    document.getElementById("wscore").innerText = wrong
+                }
+            }
+            clickOpt = 1
+
+        }
+
+       
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+nav{
+    
+    padding: 5px;
+    background-color: rgb(99, 247, 190);
+    border-radius: 500px;
+    width: 500px;
+    
+}
+nav a{
+    text-decoration: none;
+    color: darkblue;
+    margin: 5px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+nav a:hover{
+color: rgb(231, 12, 132);
+}
