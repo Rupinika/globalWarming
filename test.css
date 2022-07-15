@@ -14,7 +14,7 @@
 
 
 .red{
-  background-color: rgb(182, 195, 255);
+  background-color: rgb(247, 188, 235);
   border-radius: 60px;
     height: 30px;
     width: 600px;
@@ -26,7 +26,7 @@
 
 }
 .red:hover{
-    background-color: rgb(243, 36, 36);
+    background-color: rgb(157, 157, 249);
 }
 button{
     background-color: rgb(124, 101, 255);
