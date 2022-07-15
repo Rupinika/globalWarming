@@ -110,12 +110,12 @@
             optionCorrect: "Certain gases in the atmosphere trap heat and warm the Earth"
         }
         questionFour = {
-            question: "If the greenhouse effect is natural, then why is today's climate change a bad thing?",
-            optionOne: "Humans have altered a natural process and exaggerated changes that might normally occur over millions of years",
-            optionTwo: "Once released into the atmosphere, greenhouse gases remain potent for many years, making it difficult to reverse the process.",
-            optionThree: "A small increase in greenhouse gas concentration can have a large effect of increased warming",
-            optionFour: "All of the above",
-            optionCorrect: "All of the above"
+            question: "Earths temperatures are stable because we are surrounded by      which allows the right amount of sunlight in to warm the Earth.",
+            optionOne: "A cloud layer",
+            optionTwo: "An atmosphere",
+            optionThree: "Gravity",
+            optionFour: "Water",
+            optionCorrect: "An atmosphere"
         }
         questionFive = {
             question: " Which activity is the largest contributors of greenhouse gases?",
@@ -163,6 +163,7 @@
 		let wrong = 0
 
         let clickOpt = 0
+      
         function checkoption(clickedOpt) {
             if (clickOpt == 0) {
                 if (clickedOpt.innerText == questions[questionNumber]["optionCorrect"]) {
@@ -174,11 +175,14 @@
                     clickedOpt.style.backgroundColor = "red"
                     wrong = wrong + 1
                     document.getElementById("wscore").innerText = wrong
+                
                 }
+                
             }
             clickOpt = 1
 
         }
+
 
        
 

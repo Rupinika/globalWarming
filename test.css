@@ -14,7 +14,7 @@
 
 
 .red{
-  background-color: rgb(247, 188, 235);
+  background-color: lightpink;
   border-radius: 60px;
     height: 30px;
     width: 600px;
@@ -136,6 +136,7 @@ table{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 
 }
 td{
