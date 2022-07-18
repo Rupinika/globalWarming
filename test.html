@@ -87,11 +87,11 @@
 
         questionOne = {
             question: "What is Global Warming?",
-            optionOne: "It is a heating process used to heat the Earth.",
-            optionTwo: "It is an event that might happen in the future melting our Earth.",
-            optionThree: "It is the process in which our Earth's averge temperature rises.",
-            optionFour: "It is the process in which our global rainforest average temperature rises. ",
-            optionCorrect: "It is the process in which our Earth's averge temperature rises."
+            optionOne: " A heating process used to heat the Earth.",
+            optionTwo: " An event in the future that melts our Earth.",
+            optionThree: "The process in which our Earth's averge temperature rises.",
+            optionFour: " The process in which our global rainforest average temperature rises. ",
+            optionCorrect: "The process in which our Earth's averge temperature rises."
         }
         questionTwo = {
             question: "In the past century how much has the temperature of the Earth increased?",
@@ -135,7 +135,7 @@
         }
 
         questions = [questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix]
-
+        
         function changeQuestion() {
             questionNumber += 1
             document.getElementById("question").innerText = questions[questionNumber]["question"]

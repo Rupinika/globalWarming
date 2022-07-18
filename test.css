@@ -61,16 +61,16 @@ background-color: rgb(65, 54, 219);
   margin-top: 75px;
 
 padding: 20px;
-  animation-name: up;
-  animation-duration: 2s;
+  animation-name: appear;
+  animation-duration: 6s;
   animation-iteration-count: 1;
 }
-@keyframes up {
+@keyframes appear {
   0%{
-      margin-top: 600px;
+    opacity: 0;
   }
   100%{
-      margin-top: 75px;
+    opacity: 1;
   }
 }
 
